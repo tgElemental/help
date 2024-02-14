@@ -45,7 +45,7 @@ a, button {
   background-color: #535bf2;
   cursor: pointer;
   transition: border-color 0.25s;
-  width: 360px;
+  width: 300px;
   display: block;
 }
 button:hover {
