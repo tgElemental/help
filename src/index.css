@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Vazirmatn, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -35,7 +35,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+a, button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -45,6 +45,8 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  width: 100%;
+  display: block;
 }
 button:hover {
   border-color: #646cff;
@@ -71,4 +73,20 @@ button:focus-visible {
   max-width: 160px;
   width: 160px;
   height: auto;
+}
+
+.fade-enter {
+  opacity:  0;
+  z-index:  1;
+}
+.fade-enter-active {
+  opacity:  1;
+  transition: opacity  300ms;
+}
+.fade-exit {
+  opacity:  1;
+}
+.fade-exit-active {
+  opacity:  0;
+  transition: opacity  300ms;
 }
