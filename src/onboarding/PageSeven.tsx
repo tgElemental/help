@@ -5,7 +5,7 @@ const PageSeven = () => {
     <div>
       <h1>عناصر</h1>
       <img src={SevenImage} alt="Game"  className='mainimage'/>
-      <p>آب، باد، زمین و آتش چهار عنصر اصلی و عمومی بازی هستند.</p>
+      <p>برخورد زمین و آب یک درخت به شما جایزه می‌دهد.</p>
       <Link to="/eight">بعدی</Link>
     </div>
   );

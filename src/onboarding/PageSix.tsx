@@ -5,7 +5,7 @@ const PageSix = () => {
     <div>
       <h1>عناصر</h1>
       <img src={SixImage} alt="Game"  className='mainimage'/>
-      <p>آب، باد، زمین و آتش چهار عنصر اصلی و عمومی بازی هستند.</p>
+      <p>برخورد آتش و باد یک نور به شما جایزه می‌دهد.</p>
       <Link to="/seven">بعدی</Link>
     </div>
   );

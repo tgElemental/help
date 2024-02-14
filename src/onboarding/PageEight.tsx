@@ -5,7 +5,7 @@ const PageEight = () => {
     <div>
       <h1>عناصر</h1>
       <img src={EightImage} alt="Game"  className='mainimage'/>
-      <p>آب، باد، زمین و آتش چهار عنصر اصلی و عمومی بازی هستند.</p>
+      <p>هر روز ۲۰ عنصر برای بازی دریافت می‌کنید، ۵ عنصر از هرکدام</p>
       <Link to="/nine">بعدی</Link>
     </div>
   );

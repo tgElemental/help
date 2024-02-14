@@ -5,7 +5,7 @@ const PageFour = () => {
     <div>
       <h1>عناصر</h1>
       <img src={FourImage} alt="Game"  className='mainimage'/>
-      <p>آب، باد، زمین و آتش چهار عنصر اصلی و عمومی بازی هستند.</p>
+      <p>بر اساس قدرت عنصری که بازی کردید، برنده، مساوی یا بازنده می‌شوید.</p>
       <Link to="/five">بعدی</Link>
     </div>
   );
