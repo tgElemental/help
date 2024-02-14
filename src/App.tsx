@@ -1,5 +1,5 @@
 import './App.css'
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { MemoryRouter as Router, Route, Routes } from "react-router-dom";
 import PageOne from './onboarding/PageOne';
 import PageTwo from './onboarding/PageTwo';
 import WebApp from '@twa-dev/sdk'
