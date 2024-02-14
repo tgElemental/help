@@ -13,6 +13,10 @@ import PageEight from './onboarding/PageEight';
 import PageNine from './onboarding/PageNine';
 function App() {
   WebApp.ready();
+  WebApp.expand();
+  WebApp.MainButton.hide();
+
+  WebApp.setBackgroundColor('#ffffff');
   return (
     <Router>
       <Routes>
