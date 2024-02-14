@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
-import TwoImage from '../assets/two.jpeg';
-const PageTwo = () => {
+import SevenImage from '../assets/seven.jpeg';
+const PageSeven = () => {
   return (
     <div>
       <h1>عناصر</h1>
-      <img src={TwoImage} alt="Game"  className='mainimage'/>
+      <img src={SevenImage} alt="Game"  className='mainimage'/>
       <p>آب، باد، زمین و آتش چهار عنصر اصلی و عمومی بازی هستند.</p>
-      <Link to="/three">بعدی</Link>
+      <Link to="/eight">بعدی</Link>
     </div>
   );
 };
 
-export default PageTwo;
+export default PageSeven;
