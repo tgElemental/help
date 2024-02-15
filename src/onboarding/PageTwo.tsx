@@ -1,13 +1,30 @@
 import { Link } from 'react-router-dom';
+import { Image, Layout, Button, Spin } from 'antd';
+const { Footer: AntFooter } = Layout;
 import TwoImage from '../assets/two.jpeg';
+import { useState } from 'react';
 const PageTwo = () => {
+const [isLoading, setIsLoading] = useState(true);
+const handleImageLoad = () => {setIsLoading(false);};
   return (
-    <div>
+<Layout>
+  <div>
       <h1>عناصر</h1>
-      <img src={TwoImage} alt="Game"  className='mainimage'/>
+      {isLoading && <Spin />}
+      <Image
+        src={TwoImage}
+        alt="Game"
+        placeholder={<Spin />}
+        onError={() => console.error('Failed to load image')}
+        onLoad={handleImageLoad}
+        className='mainimage'
+      />
       <p>آب، باد، زمین و آتش چهار عنصر اصلی و عمومی بازی هستند.</p>
-      <Link to="/three">بعدی</Link>
     </div>
+  <AntFooter>
+    <Link to="/three" className='nextlink'><Button type="primary" size="large" block>بعدی</Button></Link>
+  </AntFooter>
+</Layout>
   );
 };
 
