@@ -77,3 +77,8 @@ p{
   opacity:  0;
   transition: opacity  300ms;
 }
+
+.ant-layout, .ant-layout-footer{
+  background-color: #ffffff !important;
+}
+div, .ant-btn {font-family: Vazirmatn !important}
