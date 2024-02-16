@@ -28,4 +28,5 @@ export const flexStyle: React.CSSProperties = {
   margin: "auto",
   flexDirection: "column",
   justifyContent: "center",
+  flex: 1
 };
