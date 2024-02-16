@@ -20,9 +20,7 @@ import PageNine from "./onboarding/PageNine";
 
 function App() {
   WebApp.ready();
-  WebApp.expand();
   WebApp.setBackgroundColor("#ffffff");
-
   const LocationAwareComponent = () => {
     const location = useLocation();
     return (

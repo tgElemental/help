@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import WebApp from "@twa-dev/sdk";
 import { Grid } from "antd-mobile";
-import Typewriter from "typewriter-effect"; // Import the Typewriter component
+import Typewriter from "typewriter-effect";
 import data from "@emoji-mart/data";
 import { init } from "emoji-mart";
 init({ data });
@@ -54,12 +54,6 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
             delay: 75,
           }}
         />
-        {/* <br />
-        <Link to={linkTo} className="nextlink">
-          <Button block color="primary" size="large">
-            بعدی
-          </Button>
-        </Link> */}
       </Grid>
     </>
   );
