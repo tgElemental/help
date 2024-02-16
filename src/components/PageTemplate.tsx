@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Typography, Image, Layout, Button } from "antd";
+import { Typography, Image, Layout, Button, Skeleton } from "antd";
 import { Content, Footer } from "antd/es/layout/layout";
 import { CaretRightOutlined } from "@ant-design/icons";
 import { layoutStyle, contentStyle, footerStyle } from "../components/Styling";
@@ -28,7 +28,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
         <Image
           src={image}
           alt={title}
-          placeholder
+          placeholder={<Skeleton.Image active />}
           preview={false}
           className="mainimage"
           width={160}
