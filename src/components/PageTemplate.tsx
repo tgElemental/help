@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Image, Layout, Button, Spin } from "antd";
 import { Content, Footer } from "antd/es/layout/layout";
+import { CaretRightOutlined } from "@ant-design/icons";
 import { layoutStyle, contentStyle, footerStyle } from "../components/Styling";
 
 // Define the props type
@@ -41,7 +42,12 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
       </Content>
       <Footer style={footerStyle}>
         <Link to={linkTo} className="nextlink">
-          <Button type="primary" size="large" block shape="round">
+          <Button
+            type="primary"
+            size="large"
+            block
+            icon={<CaretRightOutlined />}
+          >
             بعدی
           </Button>
         </Link>
