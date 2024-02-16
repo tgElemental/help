@@ -10,9 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emoji-mart/data": "^1.1.2",
+    "@emoji-mart/react": "^1.1.1",
     "@twa-dev/sdk": "^7.0.0",
     "@vitejs/plugin-basic-ssl": "^1.1.0",
-    "antd": "^5.14.1",
+    "antd-mobile": "^5.34.0",
+    "antd-mobile-icons": "^0.3.0",
+    "emoji-mart": "^5.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-microsoft-clarity": "^1.2.0",

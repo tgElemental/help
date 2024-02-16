@@ -1,13 +1,12 @@
 import PageTemplate from "../components/PageTemplate";
-import Image from "../assets/one.jpg";
 
 const PageOne = () => {
   return (
     <PageTemplate
       number="۱"
       linkTo="/two"
+      emoji="video_game"
       title="بازی  عناصر"
-      image={Image}
       paragraphText="بازی  عناصر  یک  بازی  ساده  و  بی‌دردسر  است!"
     />
   );

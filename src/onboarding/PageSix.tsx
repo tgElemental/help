@@ -1,13 +1,12 @@
 import PageTemplate from "../components/PageTemplate";
-import Image from "../assets/six.jpg";
 
 const PageSix = () => {
   return (
     <PageTemplate
       number="۶"
+      emoji="sunny"
       linkTo="/seven"
       title="جایزه"
-      image={Image}
       paragraphText="برخورد آتش و باد یک نور به شما جایزه می‌دهد."
     />
   );

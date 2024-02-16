@@ -1,45 +1,52 @@
 import { Link } from "react-router-dom";
-import { Typography, Image, Layout, Button, Skeleton } from "antd";
-import { Content, Footer } from "antd/es/layout/layout";
-import { CaretRightOutlined } from "@ant-design/icons";
-import { layoutStyle, contentStyle, footerStyle } from "../components/Styling";
+import { Button, Grid } from "antd-mobile";
 import Typewriter from "typewriter-effect"; // Import the Typewriter component
-const { Text } = Typography;
+import data from "@emoji-mart/data";
+import { init } from "emoji-mart";
+init({ data });
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      "em-emoji": any;
+    }
+  }
+}
 
 // Define the props type
 interface PageTemplateProps {
   number: string;
   linkTo: string;
   title: string;
-  image: string;
   paragraphText: string;
+  emoji: string;
 }
-const { Title } = Typography;
-// Use the props type in your component
+
 const PageTemplate: React.FC<PageTemplateProps> = ({
+  emoji,
   number,
   linkTo,
   title,
-  image,
   paragraphText,
 }) => {
   return (
-    <Layout style={layoutStyle}>
-      <Content style={contentStyle}>
-        <Title>{title}</Title>
-        <br />
-        <Text>{number} / </Text>
-        <Text type="secondary"> ۹ </Text>
-        <br />
-        <Image
+    <>
+      <Grid columns={1} gap={8}>
+        <Grid.Item>
+          <h1>{title}</h1>
+        </Grid.Item>
+        <h5>{number} / ۹ </h5>
+        <div className="image-container">
+          <em-emoji id={emoji} size="10em"></em-emoji>
+          {/* <Image
           src={image}
           alt={title}
-          placeholder={<Skeleton.Image active />}
-          preview={false}
+          placeholder={<Skeleton />}
           className="mainimage"
           width={160}
           height={160}
-        />
+          lazy
+        /> */}
+        </div>
         <Typewriter
           options={{
             strings: [paragraphText],
@@ -48,21 +55,14 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
             delay: 75,
           }}
         />
-      </Content>
-      <Footer style={footerStyle}>
+        <br />
         <Link to={linkTo} className="nextlink">
-          <Button
-            type="primary"
-            size="large"
-            block
-            icon={<CaretRightOutlined />}
-            style={{ width: "100%" }}
-          >
+          <Button block color="primary" size="large">
             بعدی
           </Button>
         </Link>
-      </Footer>
-    </Layout>
+      </Grid>
+    </>
   );
 };
 

@@ -21,13 +21,16 @@ p {
   transition: opacity 300ms;
 }
 
-.ant-layout,
-.ant-layout-footer {
-  background-color: #ffffff !important;
-}
+.adm-button,
 div,
 .ant-btn,
 h1,
 h5 {
   font-family: Vazirmatn !important;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
