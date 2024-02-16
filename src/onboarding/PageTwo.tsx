@@ -1,5 +1,5 @@
 import PageTemplate from "../components/PageTemplate";
-import Image from "../assets/two.jpeg";
+import Image from "../assets/two.jpg";
 
 const PageTwo = () => {
   return (
