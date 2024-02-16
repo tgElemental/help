@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
-import { Button, Grid } from "antd-mobile";
+import { useNavigate } from "react-router-dom";
+import WebApp from "@twa-dev/sdk";
+import { Grid } from "antd-mobile";
 import Typewriter from "typewriter-effect"; // Import the Typewriter component
 import data from "@emoji-mart/data";
 import { init } from "emoji-mart";
@@ -28,6 +29,12 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
   title,
   paragraphText,
 }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(linkTo);
+  };
+  WebApp.MainButton.show();
+  WebApp.MainButton.onClick(handleClick);
   return (
     <>
       <Grid columns={1} gap={8}>
@@ -37,15 +44,6 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
         <h5>{number} / ۹ </h5>
         <div className="image-container">
           <em-emoji id={emoji} size="10em"></em-emoji>
-          {/* <Image
-          src={image}
-          alt={title}
-          placeholder={<Skeleton />}
-          className="mainimage"
-          width={160}
-          height={160}
-          lazy
-        /> */}
         </div>
         <Typewriter
           options={{
@@ -55,12 +53,12 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
             delay: 75,
           }}
         />
-        <br />
+        {/* <br />
         <Link to={linkTo} className="nextlink">
           <Button block color="primary" size="large">
             بعدی
           </Button>
-        </Link>
+        </Link> */}
       </Grid>
     </>
   );

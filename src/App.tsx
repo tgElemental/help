@@ -21,7 +21,6 @@ import PageNine from "./onboarding/PageNine";
 function App() {
   WebApp.ready();
   WebApp.expand();
-  WebApp.MainButton.hide();
   WebApp.setBackgroundColor("#ffffff");
 
   const LocationAwareComponent = () => {
