@@ -8,7 +8,7 @@ export const layoutStyle = {
 export const contentStyle: React.CSSProperties = {
   textAlign: "center",
   minHeight: 120,
-  lineHeight: "120px",
+  lineHeight: 2,
   color: "#000000",
   backgroundColor: "#ffffff",
 };
@@ -17,16 +17,4 @@ export const footerStyle: React.CSSProperties = {
   textAlign: "center",
   color: "#fff",
   backgroundColor: "#4096ff",
-};
-
-export const flexStyle: React.CSSProperties = {
-  textAlign: "center",
-  color: "#fff",
-  backgroundColor: "#4096ff",
-  width: "100%",
-  height: "100vh",
-  margin: "auto",
-  flexDirection: "column",
-  justifyContent: "center",
-  flex: 1,
 };

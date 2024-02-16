@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Image, Layout, Button, Spin } from "antd";
+import { Typography, Image, Layout, Button, Spin } from "antd";
 import { Content, Footer } from "antd/es/layout/layout";
 import { CaretRightOutlined } from "@ant-design/icons";
 import { layoutStyle, contentStyle, footerStyle } from "../components/Styling";
@@ -12,6 +12,7 @@ interface PageTemplateProps {
   image: string;
   paragraphText: string;
 }
+const { Title } = Typography;
 
 // Use the props type in your component
 const PageTemplate: React.FC<PageTemplateProps> = ({
@@ -28,7 +29,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
   return (
     <Layout style={layoutStyle}>
       <Content style={contentStyle}>
-        <h1>{title}</h1>
+        <Title>{title}</Title>
         {isLoading && <Spin />}
         <Image
           src={image}
@@ -38,7 +39,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
           onLoad={handleImageLoad}
           className="mainimage"
         />
-        <p>{paragraphText}</p>
+        <Title level={5}>{paragraphText}</Title>
       </Content>
       <Footer style={footerStyle}>
         <Link to={linkTo} className="nextlink">
