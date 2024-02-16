@@ -26,6 +26,8 @@ p {
   background-color: #ffffff !important;
 }
 div,
-.ant-btn {
+.ant-btn,
+h1,
+h5 {
   font-family: Vazirmatn !important;
 }

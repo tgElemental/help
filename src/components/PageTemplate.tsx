@@ -1,6 +1,5 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Typography, Image, Layout, Button, Spin } from "antd";
+import { Typography, Image, Layout, Button } from "antd";
 import { Content, Footer } from "antd/es/layout/layout";
 import { CaretRightOutlined } from "@ant-design/icons";
 import { layoutStyle, contentStyle, footerStyle } from "../components/Styling";
@@ -21,22 +20,15 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
   image,
   paragraphText,
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const handleImageLoad = () => {
-    setIsLoading(false);
-  };
-
   return (
     <Layout style={layoutStyle}>
       <Content style={contentStyle}>
         <Title>{title}</Title>
-        {isLoading && <Spin />}
         <Image
           src={image}
-          alt="Game"
-          placeholder={<Spin />}
-          onError={() => console.error("Failed to load image")}
-          onLoad={handleImageLoad}
+          alt={title}
+          placeholder
+          preview={false}
           className="mainimage"
         />
         <Title level={5}>{paragraphText}</Title>
