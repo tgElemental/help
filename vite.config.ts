@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react(), basicSsl()],
   build: {
     outDir: "./docs",
+    chunkSizeWarningLimit: 200,
   },
   base: "./",
 });
