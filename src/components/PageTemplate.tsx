@@ -34,6 +34,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
     navigate(linkTo);
   };
   WebApp.MainButton.show();
+  WebApp.MainButton.setText("بعدی");
   WebApp.MainButton.onClick(handleClick);
   return (
     <>
