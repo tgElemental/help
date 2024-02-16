@@ -23,7 +23,7 @@ export default defineConfig({
       },
     },
     outDir: "./docs",
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 600,
   },
   base: "./",
 });
