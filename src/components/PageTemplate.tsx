@@ -4,18 +4,20 @@ import { Content, Footer } from "antd/es/layout/layout";
 import { CaretRightOutlined } from "@ant-design/icons";
 import { layoutStyle, contentStyle, footerStyle } from "../components/Styling";
 import Typewriter from "typewriter-effect"; // Import the Typewriter component
+const { Text } = Typography;
 
 // Define the props type
 interface PageTemplateProps {
+  number: string;
   linkTo: string;
   title: string;
   image: string;
   paragraphText: string;
 }
 const { Title } = Typography;
-
 // Use the props type in your component
 const PageTemplate: React.FC<PageTemplateProps> = ({
+  number,
   linkTo,
   title,
   image,
@@ -25,6 +27,10 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
     <Layout style={layoutStyle}>
       <Content style={contentStyle}>
         <Title>{title}</Title>
+        <br />
+        <Text>{number} / </Text>
+        <Text type="secondary"> ۹ </Text>
+        <br />
         <Image
           src={image}
           alt={title}

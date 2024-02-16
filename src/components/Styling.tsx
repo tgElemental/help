@@ -4,6 +4,7 @@ export const layoutStyle = {
   margin: "auto",
   width: "calc(50% - 8px)",
   maxWidth: "calc(50% - 8px)",
+  FontFace: "Vazirmatn",
 };
 export const contentStyle: React.CSSProperties = {
   textAlign: "center",

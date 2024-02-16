@@ -4,6 +4,7 @@ import Image from "../assets/eight.jpg";
 const PageEight = () => {
   return (
     <PageTemplate
+      number="۸"
       linkTo="/nine"
       title="عناصر روزانه"
       image={Image}

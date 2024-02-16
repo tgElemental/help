@@ -4,6 +4,7 @@ import Image from "../assets/three.jpg";
 const PageThree = () => {
   return (
     <PageTemplate
+      number="۳"
       linkTo="/four"
       title="راند"
       image={Image}
