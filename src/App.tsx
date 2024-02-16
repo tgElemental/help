@@ -1,23 +1,28 @@
-import './App.css'
-import { MemoryRouter as Router, Route, Routes, useLocation } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import "./App.css";
+import {
+  MemoryRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 
-import WebApp from '@twa-dev/sdk'
-import PageOne from './onboarding/PageOne';
-import PageTwo from './onboarding/PageTwo';
-import PageFour from './onboarding/PageFour';
-import PageThree from './onboarding/PageThree';
-import PageFive from './onboarding/PageFive';
-import PageSix from './onboarding/PageSix';
-import PageSeven from './onboarding/PageSeven';
-import PageEight from './onboarding/PageEight';
-import PageNine from './onboarding/PageNine';
+import WebApp from "@twa-dev/sdk";
+import PageOne from "./onboarding/PageOne";
+import PageTwo from "./onboarding/PageTwo";
+import PageFour from "./onboarding/PageFour";
+import PageThree from "./onboarding/PageThree";
+import PageFive from "./onboarding/PageFive";
+import PageSix from "./onboarding/PageSix";
+import PageSeven from "./onboarding/PageSeven";
+import PageEight from "./onboarding/PageEight";
+import PageNine from "./onboarding/PageNine";
 
 function App() {
   WebApp.ready();
   WebApp.expand();
   WebApp.MainButton.hide();
-  WebApp.setBackgroundColor('#ffffff');
+  WebApp.setBackgroundColor("#ffffff");
 
   const LocationAwareComponent = () => {
     const location = useLocation();
