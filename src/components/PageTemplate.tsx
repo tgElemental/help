@@ -3,6 +3,7 @@ import { Typography, Image, Layout, Button } from "antd";
 import { Content, Footer } from "antd/es/layout/layout";
 import { CaretRightOutlined } from "@ant-design/icons";
 import { layoutStyle, contentStyle, footerStyle } from "../components/Styling";
+import Typewriter from "typewriter-effect"; // Import the Typewriter component
 
 // Define the props type
 interface PageTemplateProps {
@@ -30,8 +31,17 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
           placeholder
           preview={false}
           className="mainimage"
+          width={160}
+          height={160}
         />
-        <Title level={5}>{paragraphText}</Title>
+        <Typewriter
+          options={{
+            strings: [paragraphText],
+            autoStart: true,
+            loop: false,
+            delay: 75,
+          }}
+        />
       </Content>
       <Footer style={footerStyle}>
         <Link to={linkTo} className="nextlink">
@@ -40,6 +50,7 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
             size="large"
             block
             icon={<CaretRightOutlined />}
+            style={{ width: "100%" }}
           >
             بعدی
           </Button>
