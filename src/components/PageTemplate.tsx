@@ -34,7 +34,6 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
     if (linkTo === "/") {
       WebApp.MainButton.setText("بازی در روبات");
       WebApp.close();
-      WebApp.openTelegramLink("https://t.me/ElementalGameBot");
     } else {
       WebApp.MainButton.setText("بعدی");
       navigate(linkTo);
