@@ -31,7 +31,11 @@ const PageTemplate: React.FC<PageTemplateProps> = ({
 }) => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate(linkTo);
+    if (linkTo === "/") {
+      WebApp.openTelegramLink("https://t.me/ElementalGameBot");
+    } else {
+      navigate(linkTo);
+    }
   };
   WebApp.MainButton.show();
   WebApp.MainButton.setText("بعدی");
